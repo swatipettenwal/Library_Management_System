@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Library Management System </title>
+    </head>
+    <body>
+        <center><h1><span style="color:darkgreen;">STUDENT VIEW FOR LIBRARY BOOKS</span></h1>
+
+        {% if latest_book_list %}
+            {% for book in latest_book_list %}
+                <li><strong><span style="color:purple;">{{book.book_name }}</span></strong></li>
+                <pre></pre>
+            {% endfor %}
+            <pre>
+
+
+
+                <h3>For Admin Login, <a href="http://swatipettenwal.pythonanywhere.com/admin/login/?next=/admin/"><span style="color:orange;">click here</span></a></h3>
+            </pre>
+        {% else %}
+            <p><span style="color:purple;">No books are available.</span></p>
+        {% endif %}
+        </center>
+    </body>
+</html>
